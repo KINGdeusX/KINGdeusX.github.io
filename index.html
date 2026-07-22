@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@KINGdeusX — TheNewKing</title>
+<meta name="description" content="Full-stack developer, embedded tinkerer, and professional overthinker. Laravel, Oracle, ESP32, cycling, airsoft, running, and a Sony A6400.">
+
+<meta property="og:title" content="@KINGdeusX — TheNewKing">
+<meta property="og:description" content="Full-stack developer, embedded tinkerer, professional overthinker.">
+<meta property="og:image" content="images/og-cover.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0a">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-physics" aria-hidden="true"></canvas>
+
+<a class="skip-link" href="#feed">Skip to content</a>
+
+<!-- ===== TOP NAV ===== -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">K/</span>
+      <span class="brand-handle">@KINGdeusX</span>
+    </a>
+
+    <nav class="primary-nav" id="primary-nav">
+      <a href="#feed">Feed</a>
+      <a href="#stack">Stack</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <a class="btn btn-primary btn-sm" href="https://github.com/KINGdeusX" target="_blank" rel="noopener">Follow</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== PROFILE / HERO ===== -->
+  <section class="profile" id="profile">
+    <div class="profile-inner">
+      <div class="avatar-wrap">
+        <img class="avatar" src="images/avatar.jpg" alt="TheNewKing profile photo" width="400" height="400">
+        <span class="status-dot" title="online-ish"></span>
+      </div>
+
+      <div class="profile-info">
+        <div class="name-row">
+          <h1>TheNewKing</h1>
+          <svg class="verified" width="22" height="22" viewBox="0 0 24 24" title="Verified: ships code, rides bikes, overengineers everything">
+            <path fill="#ff2b2b" d="M12 1.5l2.6 1.5 3-.4 1.3 2.7 2.7 1.3-.4 3 1.5 2.6-1.5 2.6.4 3-2.7 1.3-1.3 2.7-3-.4L12 22.5l-2.6-1.5-3 .4-1.3-2.7-2.7-1.3.4-3L1.3 12l1.5-2.6-.4-3 2.7-1.3L6.4 2.6l3 .4L12 1.5z"/>
+            <path fill="#0a0a0a" d="M9.8 12.4l1.7 1.7 3.4-3.9" stroke="#f5f5f2" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="handle">@KINGdeusX <span class="dot">·</span> Manolo Fortich / CDO, PH</p>
+        <p class="tagline">FULL&#8209;STACK DEVELOPER &middot; EMBEDDED TINKERER &middot; PROFESSIONAL OVERTHINKER</p>
+
+        <p class="status-pill" id="status-pill">🟢 currently compiling</p>
+
+        <p class="bio">
+          I write PHP by day, ESP32 firmware by night, and I hold unreasonably strong opinions
+          about Oracle crosstab queries. Currently teaching a government claims system some manners.
+          Ask me anything — including the meaning of life, I've got theories. They're bad theories.
+          I still have them.
+        </p>
+
+        <div class="stats-row">
+          <div class="stat"><span class="stat-num">6</span><span class="stat-label">public repos</span></div>
+          <div class="stat"><span class="stat-num">&infin;</span><span class="stat-label">cups of coffee</span></div>
+          <div class="stat"><span class="stat-num">1,200+</span><span class="stat-label">km pedaled (est.)</span></div>
+          <div class="stat"><span class="stat-num">0</span><span class="stat-label">regrets (lying)</span></div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/KINGdeusX" target="_blank" rel="noopener">Follow on GitHub &rarr;</a>
+          <a class="btn btn-outline" href="https://linkedin.com/in/jlbTAGAS" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY HIGHLIGHTS -->
+    <div class="highlights" role="navigation" aria-label="Quick sections">
+      <a href="#feed" class="highlight"><span class="highlight-ring">💻</span><span>Code</span></a>
+      <a href="#hobbies" class="highlight"><span class="highlight-ring">🚴</span><span>Cycling</span></a>
+      <a href="#hobbies" class="highlight"><span class="highlight-ring">🎯</span><span>Airsoft</span></a>
+      <a href="#hobbies" class="highlight"><span class="highlight-ring">🏃</span><span>Running</span></a>
+      <a href="#gallery" class="highlight"><span class="highlight-ring">📷</span><span>Photos</span></a>
+      <a href="#hobbies" class="highlight"><span class="highlight-ring">🖨️</span><span>3D&nbsp;Print</span></a>
+      <a href="#stack" class="highlight"><span class="highlight-ring">⚡</span><span>Stack</span></a>
+    </div>
+  </section>
+
+  <!-- ===== FEED / PROJECTS ===== -->
+  <section class="section" id="feed">
+    <div class="section-head">
+      <p class="eyebrow">// recent activity</p>
+      <h2>Shipped (mostly working)</h2>
+    </div>
+
+    <div class="feed-grid">
+
+      <article class="post">
+        <div class="post-media">
+          <img src="images/project-crci.jpg" alt="CRC-I / Project Mercury cover image" width="1200" height="800" loading="lazy">
+          <span class="post-tag">flagship</span>
+        </div>
+        <div class="post-body">
+          <div class="post-head">
+            <img class="post-avatar" src="images/avatar.jpg" alt="" width="28" height="28">
+            <span class="post-user">kingdeusx</span>
+            <span class="post-time">· active project</span>
+          </div>
+          <h3>CRC-I <span class="mono">// Project Mercury</span></h3>
+          <p>Built a claims review system so PhilHealth paperwork would stop haunting my dreams.
+             Laravel 12 + FilamentPHP v3 on the TALL stack, Oracle 23c backend, deliberation reports
+             with crosstab queries that made me question my life choices. 15 phases. 0 sleep.</p>
+          <div class="post-tags">
+            <span>Laravel</span><span>FilamentPHP</span><span>Oracle 23c</span><span>TALL Stack</span>
+          </div>
+          <div class="post-engage">
+            <button class="like-btn" type="button" data-count="128">❤ <span>128</span></button>
+            <span>💬 24</span>
+            <span class="shipped">🔁 shipped</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-media">
+          <img src="images/project-crci-mobile.jpg" alt="CRC-I Mobile cover image" width="1200" height="800" loading="lazy">
+        </div>
+        <div class="post-body">
+          <div class="post-head">
+            <img class="post-avatar" src="images/avatar.jpg" alt="" width="28" height="28">
+            <span class="post-user">kingdeusx</span>
+            <span class="post-time">· side quest</span>
+          </div>
+          <h3>CRC-I Mobile</h3>
+          <p>Wrapped the whole system in an Android WebView because "just use the browser"
+             wasn't dramatic enough. Python + Kivy + Buildozer, online and local-network
+             fallback modes, one very confused APK.</p>
+          <div class="post-tags">
+            <span>Python</span><span>Kivy</span><span>Buildozer</span><span>Android</span>
+          </div>
+          <div class="post-engage">
+            <button class="like-btn" type="button" data-count="76">❤ <span>76</span></button>
+            <span>💬 9</span>
+            <span class="shipped">🔁 shipped</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-media">
+          <img src="images/project-airsoft.jpg" alt="ESP32 airsoft domination system cover image" width="1200" height="800" loading="lazy">
+        </div>
+        <div class="post-body">
+          <div class="post-head">
+            <img class="post-avatar" src="images/avatar.jpg" alt="" width="28" height="28">
+            <span class="post-user">kingdeusx</span>
+            <span class="post-time">· weekend project</span>
+          </div>
+          <h3>Domination Rig</h3>
+          <p>Turned airsoft games into a tactical light show. ESP32 mesh nodes talking over
+             ESP&#8209;NOW, RFID tag captures, WS2812B LEDs, a web dashboard, and zero chill.
+             My squad thinks I'm either a genius or a war criminal.</p>
+          <div class="post-tags">
+            <span>ESP32</span><span>ESP-NOW</span><span>RFID</span><span>WS2812B</span>
+          </div>
+          <div class="post-engage">
+            <button class="like-btn" type="button" data-count="203">❤ <span>203</span></button>
+            <span>💬 41</span>
+            <span class="shipped">🔁 shipped</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-media">
+          <img src="images/project-cyclecomputer.jpg" alt="ESP32-S3 cycling computer cover image" width="1200" height="800" loading="lazy">
+        </div>
+        <div class="post-body">
+          <div class="post-head">
+            <img class="post-avatar" src="images/avatar.jpg" alt="" width="28" height="28">
+            <span class="post-user">kingdeusx</span>
+            <span class="post-time">· in progress</span>
+          </div>
+          <h3>Edge Clone</h3>
+          <p>Why buy a Garmin Edge 1050 when you can build a worse one yourself? ESP32-S3,
+             GPS, an LVGL display, GPX logging. It works. Mostly. Ask me about battery
+             life later, preferably never.</p>
+          <div class="post-tags">
+            <span>ESP32-S3</span><span>GPS</span><span>LVGL</span><span>GPX</span>
+          </div>
+          <div class="post-engage">
+            <button class="like-btn" type="button" data-count="94">❤ <span>94</span></button>
+            <span>💬 17</span>
+            <span class="shipped">🔁 in progress</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-media">
+          <img src="images/project-extractor.jpg" alt="PhilHealth PDF extractor cover image" width="1200" height="800" loading="lazy">
+        </div>
+        <div class="post-body">
+          <div class="post-head">
+            <img class="post-avatar" src="images/avatar.jpg" alt="" width="28" height="28">
+            <span class="post-user">kingdeusx</span>
+            <span class="post-time">· automation</span>
+          </div>
+          <h3>PDF Extractor</h3>
+          <p>Automated the soul-crushing task of reading PhilHealth validation reports by
+             hand. Python + pdfplumber + regex that shouldn't work but does, exporting
+             straight to a multi-sheet Excel workbook. Saved hours; lost some writing the regex.</p>
+          <div class="post-tags">
+            <span>Python</span><span>pdfplumber</span><span>Regex</span><span>Excel</span>
+          </div>
+          <div class="post-engage">
+            <button class="like-btn" type="button" data-count="61">❤ <span>61</span></button>
+            <span>💬 6</span>
+            <span class="shipped">🔁 shipped</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-media">
+          <img src="images/project-volumekey.jpg" alt="VolumeKey tray utility cover image" width="1200" height="800" loading="lazy">
+        </div>
+        <div class="post-body">
+          <div class="post-head">
+            <img class="post-avatar" src="images/avatar.jpg" alt="" width="28" height="28">
+            <span class="post-user">kingdeusx</span>
+            <span class="post-time">· quality of life</span>
+          </div>
+          <h3>VolumeKey</h3>
+          <p>A tiny Windows tray app that fixes what media keys should've done from the
+             start. PyQt6, UAC elevation, custom hotkeys. Small project, disproportionate
+             satisfaction.</p>
+          <div class="post-tags">
+            <span>PyQt6</span><span>Windows Tray</span><span>Hotkeys</span>
+          </div>
+          <div class="post-engage">
+            <button class="like-btn" type="button" data-count="38">❤ <span>38</span></button>
+            <span>💬 3</span>
+            <span class="shipped">🔁 shipped</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="also-lab">
+      <p class="eyebrow">// also in the lab</p>
+      <div class="chip-row">
+        <span class="chip">Chrome extension &middot; claims data scraper</span>
+        <span class="chip">Word report generator &middot; Q1 profiling</span>
+        <span class="chip">Deskflow KVM troubleshooting</span>
+        <span class="chip">Steganography &middot; DCT / DWT</span>
+        <span class="chip">Kernel &amp; ASM, badly</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECH STACK ===== -->
+  <section class="section" id="stack">
+    <div class="section-head">
+      <p class="eyebrow">// the toolbox</p>
+      <h2>Tech stack</h2>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-group">
+        <h3>Backend &amp; Data</h3>
+        <div class="chip-row">
+          <span class="chip chip-mono">PHP</span><span class="chip chip-mono">Laravel</span>
+          <span class="chip chip-mono">FilamentPHP</span><span class="chip chip-mono">Python</span>
+          <span class="chip chip-mono">Oracle SQL</span><span class="chip chip-mono">MySQL / MariaDB</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>Frontend</h3>
+        <div class="chip-row">
+          <span class="chip chip-mono">JavaScript</span><span class="chip chip-mono">TypeScript</span>
+          <span class="chip chip-mono">Tailwind CSS</span><span class="chip chip-mono">Alpine.js</span>
+          <span class="chip chip-mono">HTML5 / CSS3</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>DevOps &amp; Infra</h3>
+        <div class="chip-row">
+          <span class="chip chip-mono">Docker</span><span class="chip chip-mono">Git</span>
+          <span class="chip chip-mono">Nginx</span><span class="chip chip-mono">Ubuntu / Linux</span>
+          <span class="chip chip-mono">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>Embedded &amp; Hardware</h3>
+        <div class="chip-row">
+          <span class="chip chip-mono">ESP32</span><span class="chip chip-mono">Arduino</span>
+          <span class="chip chip-mono">C++</span><span class="chip chip-mono">LVGL</span>
+          <span class="chip chip-mono">RFID</span><span class="chip chip-mono">LiPo / RC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="section" id="gallery">
+    <div class="section-head">
+      <p class="eyebrow">// through the viewfinder</p>
+      <h2>Gallery</h2>
+      <p class="section-sub">Shot on a Sony A6400. Mostly in focus.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item"><img src="images/gallery-01.jpg" alt="Street photography placeholder" width="1080" height="1080" loading="lazy"><figcaption>Street</figcaption></figure>
+      <figure class="gallery-item"><img src="images/gallery-02.jpg" alt="Landscape photography placeholder" width="1080" height="1080" loading="lazy"><figcaption>Landscape</figcaption></figure>
+      <figure class="gallery-item"><img src="images/gallery-03.jpg" alt="Portrait photography placeholder" width="1080" height="1080" loading="lazy"><figcaption>Portrait</figcaption></figure>
+      <figure class="gallery-item"><img src="images/gallery-04.jpg" alt="Macro photography placeholder" width="1080" height="1080" loading="lazy"><figcaption>Macro</figcaption></figure>
+      <figure class="gallery-item"><img src="images/gallery-05.jpg" alt="Golden hour photography placeholder" width="1080" height="1080" loading="lazy"><figcaption>Golden hour</figcaption></figure>
+      <figure class="gallery-item"><img src="images/gallery-06.jpg" alt="Candid photography placeholder" width="1080" height="1080" loading="lazy"><figcaption>Candid</figcaption></figure>
+      <figure class="gallery-item"><img src="images/gallery-07.jpg" alt="Urban photography placeholder" width="1080" height="1080" loading="lazy"><figcaption>Urban</figcaption></figure>
+      <figure class="gallery-item"><img src="images/gallery-08.jpg" alt="Ride point of view photography placeholder" width="1080" height="1080" loading="lazy"><figcaption>Ride POV</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ===== HOBBIES ===== -->
+  <section class="section" id="hobbies">
+    <div class="section-head">
+      <p class="eyebrow">// off the clock</p>
+      <h2>When I'm not shipping bugs</h2>
+    </div>
+
+    <div class="hobby-scroll">
+      <article class="hobby-card">
+        <img src="images/hobby-cycling.jpg" alt="Cycling placeholder" width="900" height="1125" loading="lazy">
+        <div class="hobby-info"><h3>Cycling</h3><p>Two wheels, questionable knee choices, and an unreasonable KM count.</p></div>
+      </article>
+      <article class="hobby-card">
+        <img src="images/hobby-airsoft.jpg" alt="Airsoft placeholder" width="900" height="1125" loading="lazy">
+        <div class="hobby-info"><h3>Airsoft</h3><p>Tactical cosplay with real consequences — getting shot, repeatedly.</p></div>
+      </article>
+      <article class="hobby-card">
+        <img src="images/hobby-running.jpg" alt="Running placeholder" width="900" height="1125" loading="lazy">
+        <div class="hobby-info"><h3>Running</h3><p>Training for a 64km ultra because 5K stopped being humbling enough.</p></div>
+      </article>
+      <article class="hobby-card">
+        <img src="images/hobby-3dprint.jpg" alt="3D printing placeholder" width="900" height="1125" loading="lazy">
+        <div class="hobby-info"><h3>3D Printing</h3><p>BambuLab A1, TPU everywhere, prints I definitely needed.</p></div>
+      </article>
+      <article class="hobby-card">
+        <img src="images/hobby-electronics.jpg" alt="RC and LiPo electronics placeholder" width="900" height="1125" loading="lazy">
+        <div class="hobby-info"><h3>RC / LiPo</h3><p>Controlled chaos, soldering fumes, the occasional small fire.</p></div>
+      </article>
+      <article class="hobby-card">
+        <img src="images/hobby-codm.jpg" alt="Call of Duty Mobile placeholder" width="900" height="1125" loading="lazy">
+        <div class="hobby-info"><h3>CoD Mobile</h3><p>Where my reflexes go to be humbled, nightly.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="section-head">
+      <p class="eyebrow">// let's talk</p>
+      <h2>Slide into my GitHub</h2>
+      <p class="section-sub">Open to collabs, weird embedded projects, and arguments about
+        whether crosstab queries are cursed. (They are.)</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="composer" aria-hidden="true">
+        <div class="composer-head"><img src="images/avatar.jpg" alt="" width="32" height="32"><span>Message @KINGdeusX</span></div>
+        <div class="composer-body">
+          <input type="text" placeholder="say something (or don't, I'll see it either way)" disabled>
+          <button type="button" disabled>Send</button>
+        </div>
+        <p class="composer-note">this part's just for looks — hit the buttons below to actually reach me.</p>
+      </div>
+
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-lg" href="https://github.com/KINGdeusX" target="_blank" rel="noopener">GitHub &rarr;</a>
+        <a class="btn btn-outline btn-lg" href="https://linkedin.com/in/jlbTAGAS" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> TheNewKing &middot; built with Laravel opinions and too much coffee.</p>
+  <a class="easter-egg" href="https://github.com/KINGdeusX/Social_Notes" target="_blank" rel="noopener">psst — don't click this</a>
+</footer>
+
+<script src="js/physics-bg.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
