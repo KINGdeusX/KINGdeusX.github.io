@@ -40,6 +40,7 @@
       <a href="#gallery">Gallery</a>
       <a href="#hobbies">Hobbies</a>
       <a href="#contact">Contact</a>
+      <a href="#achievements" id="nav-achievements-link">Achievements</a>
     </nav>
 
     <div class="topbar-actions">
@@ -481,6 +482,102 @@
   <p>&copy; <span id="year"></span> TheNewKing &middot; built with Laravel opinions and too much coffee.</p>
   <a class="easter-egg" href="https://github.com/KINGdeusX/Social_Notes" target="_blank" rel="noopener">psst — don't click this</a>
 </footer>
+
+<!-- ===== ACHIEVEMENTS SIDEBAR DRAWER ===== -->
+<div class="sidebar-drawer" id="achievements-sidebar" aria-hidden="true">
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <div class="sidebar-content">
+    <div class="sidebar-head">
+      <span class="sidebar-badge">// THE FLEX ZONE</span>
+      <h2>Achievements &amp; Paperwork</h2>
+      <button class="sidebar-close-btn" id="sidebar-close" aria-label="Close sidebar">&times;</button>
+    </div>
+    
+    <p class="sidebar-sub">Proof that I occasionally step away from the terminal and compete under pressure.</p>
+
+    <div class="achievements-feed">
+
+      <article class="achievement-card">
+        <div class="achievement-header">
+          <span class="achievement-badge">🏆 5th Placer</span>
+          <span class="achievement-year">2023</span>
+        </div>
+        <h3 class="achievement-title">Regional Hack4Gov2</h3>
+        <p class="achievement-desc">Came for the free Wi-Fi, stayed for the CTF panic. Ranked 5th regionally — which means exactly 4 teams broke stuff faster than us.</p>
+        <div class="achievement-meta">
+          <span>Cybersecurity</span><span>CTF</span><span>Ethics (Mostly)</span>
+        </div>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-header">
+          <span class="achievement-badge">🥈 2nd Placer</span>
+          <span class="achievement-year">2016</span>
+        </div>
+        <h3 class="achievement-title">Web Dev Interschool Division Meet</h3>
+        <p class="achievement-desc">Hand-coded HTML &amp; CSS under a ticking clock. Missed 1st place because my background color was deemed "insufficiently vibrant." I took that personally.</p>
+        <div class="achievement-meta">
+          <span>HTML5</span><span>CSS3</span><span>Spite</span>
+        </div>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-header">
+          <span class="achievement-badge">🛡️ Certified</span>
+          <span class="achievement-year">SecOps</span>
+        </div>
+        <h3 class="achievement-title">CyberAwareness, Social Engineering &amp; Threat Assessment</h3>
+        <p class="achievement-desc">Officially certified to tell you that "Password123!" is a tragedy and that clicking unexpected email attachments is how empires fall.</p>
+        <div class="achievement-meta">
+          <span>SecOps</span><span>Social Eng</span><span>Threat Intel</span>
+        </div>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-header">
+          <span class="achievement-badge">🤖 Regional Qualifier</span>
+          <span class="achievement-year">2016</span>
+        </div>
+        <h3 class="achievement-title">Regional Robotics Competition</h3>
+        <p class="achievement-desc">Built a robot that navigated forward without catching fire. Qualified for regionals; the bot immediately retired to become a very expensive desk weight.</p>
+        <div class="achievement-meta">
+          <span>Hardware</span><span>Microcontrollers</span><span>Soldering</span>
+        </div>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-header">
+          <span class="achievement-badge">⛓️ National Entry</span>
+          <span class="achievement-year">2022</span>
+        </div>
+        <h3 class="achievement-title">Decentralized Finance (DeFi) Competition</h3>
+        <p class="achievement-desc">Pushed smart contract protocols to the national level. Understood Web3 cryptography math just long enough to qualify before gas fees drained my sanity.</p>
+        <div class="achievement-meta">
+          <span>DeFi</span><span>Smart Contracts</span><span>Web3</span>
+        </div>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-header">
+          <span class="achievement-badge">🎵 Best Songwriter</span>
+          <span class="achievement-year">2018</span>
+        </div>
+        <h3 class="achievement-title">Best Songwriter Award</h3>
+        <p class="achievement-desc">Wrote acoustic lyrics that somehow convinced judges I had deep emotions. Turns out songwriting is just debugging feelings with chord progressions.</p>
+        <div class="achievement-meta">
+          <span>Acoustic</span><span>Lyrics</span><span>Debugging Feelings</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+<!-- Floating Subtle Trigger Button -->
+<button class="sidebar-float-trigger" id="sidebar-trigger" type="button" aria-label="Open Achievements Sidebar">
+  <span class="float-icon">🏆</span>
+  <span class="float-text">Achievements</span>
+</button>
 
 <script src="js/physics-bg.js"></script>
 <script src="js/main.js"></script>

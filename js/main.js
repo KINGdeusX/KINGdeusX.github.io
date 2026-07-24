@@ -99,4 +99,42 @@
     );
     revealTargets.forEach((el) => revealObserver.observe(el));
   }
+  /* ---------- achievements sidebar toggle ---------- */
+  const sidebar = document.getElementById('achievements-sidebar');
+  const sidebarTrigger = document.getElementById('sidebar-trigger');
+  const sidebarClose = document.getElementById('sidebar-close');
+  const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+  const navAchievementsLink = document.getElementById('nav-achievements-link');
+
+  function openSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.add('open');
+    sidebar.setAttribute('aria-hidden', 'false');
+    if (sidebarTrigger) sidebarTrigger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.remove('open');
+    sidebar.setAttribute('aria-hidden', 'true');
+    if (sidebarTrigger) sidebarTrigger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (sidebarTrigger) sidebarTrigger.addEventListener('click', openSidebar);
+  if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+  if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeSidebar);
+  if (navAchievementsLink) {
+    navAchievementsLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      openSidebar();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar && sidebar.classList.contains('open')) {
+      closeSidebar();
+    }
+  });
 })();
